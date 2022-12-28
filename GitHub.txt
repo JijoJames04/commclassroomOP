@@ -1,0 +1,110 @@
+git init  //to initialize a git repository
+ls .git  //to see inside git repository
+
+
+rm -rf .DS_Store  //to remove unnecessary folder created by MacOS
+
+
+git status  //to check the status
+git add .   //to stage all files in the staging area
+or
+git add filename  //to stage a particular file
+
+git commit -m "Message to be displayed"
+
+
+cat filename  //to check the content of the file
+
+
+git restore --staged filename  //to remove from staged area
+git log  //to check the history
+
+git reset hashID  //to reset to a particular time and all the 
+			//other previous commits will be in unstaged area
+
+git stash  //all the changes doesn't need to commit it also don't want to loose these changes
+	     //to send them to backstage and whenever needed bring them back
+git stash pop  //all the people in the backstage come back to staging area/unstaged area
+		   //to bring back contents stored in stash area
+(These are used to keep to working directory clean)
+git stash clear  //those changes that were made, not commited and in the separate structure are gone
+  		     //to clear those were in stash area
+
+
+
+git remote add origin URL  //URL to be attached to the project/local project
+				   //git -basically git command
+ 				   //remote -means working with URL
+				   //add -means adding a new URL
+				   //origin -means name of the URL you are going to add
+				   //name of the URL is origin(like phone number{URL} connected to a name{origin})
+(To make a connection with the URL and the particular folder)
+git remote -v  //to see all the URLs attached to a particular folder
+
+git push origin master  //to push the changes
+				//to which URL you want to push(origin -the URL attached previously{like name connected to phone number})
+				//to which branch you want to push(master branch)
+
+
+Origin URL (Your own account) 
+Upstream URL (From where you have forked the project)
+
+git remote add upstream upstreamURL  //URL from where we forked
+
+origin (Personal)
+upstream (From where you have forked it {Original URL})
+
+
+git branch branchName  //to make a new branch
+git checkout branchName  //to point the head from main branch to new branch
+
+
+git push origin newBranch  //cannot push to upstream URL
+					//As you are owner of origin you can push there
+(Always create a new branch for new feature and never commit on main branch)
+(In simple language One pull request means one branch)
+(One branch can only open one pull request)
+(For every new feature bug create a new branch so that you can open a new pull request)
+
+
+(To delete extra commit follow the steps)
+git log (to find commitID)
+git reset commitID (to change to that particular commit)
+(therefore all the changes will be unstaged)
+git add . (to stage)
+git stash (to go to stash area)
+git push origin branchName -f (if the online repository contains a commit that my repository does not)
+(commits are inter-linked, so we have to force push this)
+
+
+(To stay up-to-date with original repository and forked repository)
+step 1: git fetch --all --prune (to keep up-to-date with original repository)
+--all  - for all the branches
+--prune - the ones that are deleted will also be fetched
+(now all the changes are fetched)
+step 2: git reset --hard upstream/main (to reset the main branch of my origin to the main branch of upstream)
+step 3: git push origin main
+OR
+(to do all this in one single command)
+git pull upstream main (local folder's main is in sync with upstream main branch)
+git push origin main (to sync the originURL)
+
+
+(Before creating a new branch make sure that your main branch is up-to-date)
+(to squash commits into one single commit)
+git reset commitID (commitID just just below the new commits to be squashed)
+(all the above commits will be then unstaged)
+git add . (to stage)
+git commit -m "commit message" (to commit)
+OR
+git rebase -i commitID (to squash commits together)
+-i - interactive in moment (CommitID just below new commits to be squashed)
+{change pick to s (pick->s) to squash the required commits}
+(These wil be changed to one single commit)
+***Whichever one is listed as pick merge it into the previou commit***
+{*s will be squashed to *pick above it}
+
+esc + :x (to exit)
+
+
+git reset --hard commitID (reset with hard, so use it with causion)
