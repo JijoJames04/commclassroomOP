@@ -1,0 +1,84 @@
+github.com/new
+
+
+
+
+git clone <url>
+
+git add <filename>
+
+git commit -m "message"
+
+git status
+
+git push
+
+shorthand for git add and git commit steps:
+git commit -am "message"
+
+to download latest version from GitHub to computer:
+git pull
+
+
+
+Merge Conflicts
+---------------
+
+<<<< HEAD
+b = 2
+//Your changes
+=========
+//Remote changes
+b = 0
+>>>> 76tff67  //hash of that particular commit
+
+Remove that extra part (merge conflict markers and decide what we want
+as the resolution of the conflict)
+
+
+
+to keep track of all the changes:
+git log
+
+
+to revert back to older state:
+    git reset
+git reset --hard <commit>
+git reset --hard origin/master   //current version of the repository in GitHub
+
+
+
+
+
+Branching
+----------
+
+git branch  //current working branch
+
+
+git checkout -b nameOfNewBranch
+// -b --if to create a new branch and use it
+
+git checkout branchName  //to switch between branches
+
+
+git merge newBranch(featureBranch)  //to merge new branch into current branch
+(from main branch)
+
+
+
+
+
+
+
+
+
+GitHub Pages
+------------
+
+github.com/new  ---->  userName.github.io (conventional names)
+(automatically supports GitHub Pages)
+//otherwise manually turn on GitHub Pages
+
+After pusing the code and checking the repository:
+thatRepository --> Settings --> Pages --> URL
