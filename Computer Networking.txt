@@ -1,0 +1,72 @@
+TCP - Transmission Control Protocol
+------------------------------------
+It ensures that data will reach the correct destination without being corrupted on the way
+To receive completely TCP is used
+
+
+UDP - User Datagram Protocol
+-----------------------------
+Maybe 100% data will not be reached, some may be lost
+Video conferencing
+
+
+HTTP - Hyper Text Transfer Protocol
+------------------------------------
+Used by World Wide Web(WWW)/web browsers
+Defines the format of the data that is being transfered by web clients
+
+
+
+$curl ifconfig.me -s  //to get the ip address of the internet provider
+---------------------
+
+
+DHCP - Dynamic Host Configuration Protocol (assigns IP address connected to MODEM)
+
+NAT - Network Access Translator (helps to determine which device requested the service)
+
+
+IP address determine where your computer are located (computer or server pointed to {like a number of a person})
+eg: www.goolge.com -> x.x.x.x(ip address)
+Port number determine which application you are using to communicate (application)
+
+
+---------------------------------------------------------------
+ports are 16 bit numbers
+so,maximum available port numbers = 2 to the power 16 = 65,536
+
+HTTP = 80  //port number
+mongoDB = 27017
+SQL = 1433
+Telnet = 23
+pop = 110
+
+ports from 0 - 1023 are reserved ports
+ports from 1024 - 49152 are registered for some specific applications
+Remaining - you can use
+
+----------------------------------------------------------------
+1 mbps = 10,00,000 bits/s (6 zeros)
+1 gbps = 1,00,00,00,000 bits/s (9 zeros)
+1 kbps = 1000 bits/s (3 zeros)
+----------------------------------------------------------------
+
+ping google.com  //to see packets transmitted
+(ping - measures the round trip time for messages send from the originating host to the destination of the computer and that are a cord back)
+ping time  //can't be reduced cause we are getting the best possible ping time, signals are travelling at the speed of light
+           //through cables, satellites, etc. so we are getting the best possible time
+
+
+
+nslookup -type=mx gmail.com  //to get the name and ip address of SMTP servers for various domains
+nslookup - name server lookup
+-type=mx - mail exchange (Basically means SMTP servers) and for gmail.com
+
+
+dig google.com  //DNS lookup utility (Domain information gropper){One that i stored in my local cache}
+man dig
+
+
+sudo tcpdump -c 5  //to see all the data packets that are coming in and out of your computer
+-c 5 - to give only 5 packets
+if -c 5 is removed then it will show you all the data coming
