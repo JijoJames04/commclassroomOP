@@ -1,0 +1,17 @@
+zsh - z shell
+
+where git
+
+where echo
+
+open /usr/bin
+
+echo $PATH
+
+cat .zshrc
+
+cat /etc/zshrc
+
+cat /etc/zprofile
+
+cat ~/.zprofile

@@ -1,0 +1,29 @@
+terminal emulator - helps to use the terminal in a graphical way
+-----------------
+
+shell - it is a command line interface that will interpret our commands
+        and tell the operating system what to do
+
+environment variables - named values that are used to change how the commands like processes
+                        and everything are executed
+
+process - every instance of a running command will be known as a process
+
+
+/usr/local/bin - every commands are in this folder
+
+
+ls - to list
+
+ls -a - to show all hidden files
+
+mkdir - to make directory
+
+cd - to change directory
+
+cd .. - to go back a folder
+
+echo $PATH - file folder path separated by :
+(echo - means display)
+
+cat filename - to display the file content
